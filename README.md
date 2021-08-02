@@ -47,7 +47,7 @@ Tuve que realizar una técnica básica de **Hacking** llamada **Web Scraping**. 
 
 ### Proyecto web
 
-El frontend era simple en diseño, sin embargo opte por emplear Angular 8.2 para mantener de forma ordenada cada sección del sitio y los scripts correspondientes a los cálculos, gráficos, grillas, etc. Este proyecto no requirió de un backend.
+El frontend era simple en diseño, sin embargo opte por emplear Angular 8.2 para mantener de forma ordenada cada sección del sitio y los scripts correspondientes a los cálculos, gráficos, grillas, etc. Este proyecto no requirió de backend services.
 
 ### Dependencias
 
@@ -63,7 +63,7 @@ El frontend era simple en diseño, sin embargo opte por emplear Angular 8.2 para
 
 ### Visíta la web
 
-* [Agenda Sánchez Carrión - #CongresoSinCorrupcion2020](https://congresosincorrupcion.z19.web.core.windows.net/sanchezcarrion)
+* [Agenda Sánchez Carrión - #CongresoSinCorrupcion2020](https://congresosincorrupcion.z19.web.core.windows.net)
 
 
 ### Licencia
