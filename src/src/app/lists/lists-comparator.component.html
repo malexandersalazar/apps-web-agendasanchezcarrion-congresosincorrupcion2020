@@ -1,0 +1,137 @@
+<div class="row">
+    <div class="col">
+        <h2 id="comparacionlistas" class="mb-1">Comparación de LISTAS nacionales por indicadores de calidad</h2>
+        <p class="mb-4"><strong>(*) NOTA</strong>: La MATRIZ PARA LA EVALUACIÓN DE LA CALIDAD DE LISTAS considera 3
+            COMPONENTES
+            y 12 INDICADORES.
+            La información para seis (6) indicadores se obtuvo del JNE. La Matriz se procesó en base a los
+            INDICADORES que contaron con información del JNE, no considerándose para efectos del computo aquellos
+            INDICADORES cuya información no fue provista por los Partidos Políticos.</p>
+        <p class="mb-4">Compara los componentes e indicadores de los partidos políticos en la siguiente tabla:</p>
+    </div>
+</div>
+<div class="row mb-4">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="col-12">
+            <select class="custom-select" [(ngModel)]="firstGrouping">
+                <option *ngFor="let calification of califications" [ngValue]="calification">
+                    {{calification.PoliticalGroupName}}
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="col-12">
+            <select class="custom-select" [(ngModel)]="secondGrouping">
+                <option *ngFor="let calification of califications" [ngValue]="calification">
+                    {{calification.PoliticalGroupName}}
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="col-12">
+            <select class="custom-select" [(ngModel)]="thirdGrouping">
+                <option *ngFor="let calification of califications" [ngValue]="calification">
+                    {{calification.PoliticalGroupName}}
+                </option>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col" class="align-middle">COMPONENTE</th>
+                    <th scope="col" class="align-middle">INDICADOR</th>
+                    <th scope="col"><img alt="" width="48" height="48" src="{{firstGrouping.PoliticalGroupImageUrl}}" ></th>
+                    <th scope="col"><img alt="" width="48" height="48" src="{{secondGrouping.PoliticalGroupImageUrl}}" ></th>
+                    <th scope="col"><img alt="" width="48" height="48" src="{{thirdGrouping.PoliticalGroupImageUrl}}" ></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="align-middle" rowspan="5">REPRESENTATIVIDAD</td>
+                    <td>1.1 Número de representantes de sectores productivos.</td>
+                    <td class="text-center align-middle"><strong>N/A</strong></td>
+                    <td class="text-center align-middle"><strong>N/A</strong></td>
+                    <td class="text-center align-middle"><strong>N/A</strong></td>
+                </tr>
+                <tr>
+                    <td>1.2 Número de representantes de sectores sociales.</td>
+                    <td class="text-center align-middle"><strong>N/A</strong></td>
+                    <td class="text-center align-middle"><strong>N/A</strong></td>
+                    <td class="text-center align-middle"><strong>N/A</strong></td>
+                </tr>
+                <tr>
+                    <td>1.3 Número de representantes de pueblos originarios.</td>
+                    <td class="text-center align-middle"><strong>N/A</strong></td>
+                    <td class="text-center align-middle"><strong>N/A</strong></td>
+                    <td class="text-center align-middle"><strong>N/A</strong></td>
+                </tr>
+                <tr>
+                    <td>1.4 Diferencia entre N° de candidatos hombres y mujeres en la lista.</td>
+                    <td class="text-center align-middle" [ngClass]="{'table-danger' : firstGrouping.OneFourPoints == 0, 'table-success' : firstGrouping.OneFourPoints == 5}">{{firstGrouping.OneFourValue}}</td>
+                    <td class="text-center align-middle" [ngClass]="{'table-danger' : secondGrouping.OneFourPoints == 0, 'table-success' : secondGrouping.OneFourPoints == 5}">{{secondGrouping.OneFourValue}}</td>
+                       <td class="text-center align-middle" [ngClass]="{'table-danger' : thirdGrouping.OneFourPoints == 0, 'table-success' : thirdGrouping.OneFourPoints == 5}">{{thirdGrouping.OneFourValue}}</td>
+                </tr>
+                <tr>
+                    <td>1.5 Número de representantes jóvenes entre 25 y 35 años.</td>
+                    <td class="text-center align-middle" [ngClass]="{'table-danger' : firstGrouping.OneFivePoints == 0, 'table-success' : firstGrouping.OneFivePoints == 5}">{{firstGrouping.OneFiveValue}}</td>
+                    <td class="text-center align-middle" [ngClass]="{'table-danger' : secondGrouping.OneFivePoints == 0, 'table-success' : secondGrouping.OneFivePoints == 5}">{{secondGrouping.OneFiveValue}}</td>
+                    <td class="text-center align-middle" [ngClass]="{'table-danger' : thirdGrouping.OneFivePoints == 0, 'table-success' : thirdGrouping.OneFivePoints == 5}">{{thirdGrouping.OneFiveValue}}</td>
+                </tr>
+                <tr>
+                    <td class="align-middle" rowspan="3">EXPERTICIA E INSTRUCCIÓN</td>
+                    <td>2.1 Número de candidatos profesionales con maestrías.</td>
+                    <td class="text-center align-middle" [ngClass]="{'table-danger' : firstGrouping.TwoOnePoints == 0, 'table-success' : firstGrouping.TwoOnePoints == 5}">{{firstGrouping.TwoOneValue}}</td>
+                    <td class="text-center align-middle" [ngClass]="{'table-danger' : secondGrouping.OneFivePoints == 0, 'table-success' : secondGrouping.TwoOnePoints == 5}">{{secondGrouping.TwoOneValue}}</td>
+                    <td class="text-center align-middle" [ngClass]="{'table-danger' : thirdGrouping.TwoOnePoints == 0, 'table-success' : thirdGrouping.TwoOnePoints == 5}">{{thirdGrouping.TwoOneValue}}</td>
+                </tr>
+                <tr>
+                    <td>2.2 Número de candidatos con experiencia profesional acreditada igual o mayor 10 años.</td>
+                    <td class="text-center align-middle" [ngClass]="{'table-danger' : firstGrouping.TwoTwoPoints == 0, 'table-success' : firstGrouping.TwoTwoPoints == 5}">{{firstGrouping.TwoTwoValue}}</td>
+                    <td class="text-center align-middle" [ngClass]="{'table-danger' : secondGrouping.TwoTwoPoints == 0, 'table-success' : secondGrouping.TwoTwoPoints == 5}">{{secondGrouping.TwoTwoValue}}</td>
+                    <td class="text-center align-middle" [ngClass]="{'table-danger' : thirdGrouping.TwoTwoPoints == 0, 'table-success' : thirdGrouping.TwoTwoPoints == 5}">{{thirdGrouping.TwoTwoValue}}</td>
+                </tr>
+                <tr>
+                    <td>2.3 Número de candidatos que hayan publicado uno o más libros.</td>
+                    <td class="text-center align-middle"><strong>N/A</strong></td>
+                    <td class="text-center align-middle"><strong>N/A</strong></td>
+                    <td class="text-center align-middle"><strong>N/A</strong></td>
+                </tr>
+                <tr>
+                    <td class="align-middle" rowspan="4">TRAYECTORIA Y TRANSPARENCIA</td>
+                    <td>3.1 Número de candidatos que participaron en dos (2) o más elecciones anteriores en listas de
+                        partidos diferentes.</td>
+                    <td class="text-center align-middle" [ngClass]="{'table-danger' : firstGrouping.ThreeOnePoints == 0, 'table-success' : firstGrouping.ThreeOnePoints == 5}">{{firstGrouping.ThreeOneValue}}</td>
+                    <td class="text-center align-middle" [ngClass]="{'table-danger' : secondGrouping.ThreeOnePoints == 0, 'table-success' : secondGrouping.ThreeOnePoints == 5}">{{secondGrouping.ThreeOneValue}}</td>
+                    <td class="text-center align-middle" [ngClass]="{'table-danger' : thirdGrouping.ThreeOnePoints == 0, 'table-success' : thirdGrouping.ThreeOnePoints == 5}">{{thirdGrouping.ThreeOneValue}}</td>
+                </tr>
+                <tr>
+                    <td>3.2 Número de candidatos que son o han sido dirigentes gremiales o empresariales, un mínimo de
+                        dos años.</td>
+                    <td class="text-center align-middle"><strong>N/A</strong></td>
+                    <td class="text-center align-middle"><strong>N/A</strong></td>
+                    <td class="text-center align-middle"><strong>N/A</strong></td>
+                </tr>
+                <tr>
+                    <td>3.3 Número de candidatos que acrediten al menos un cargo público por elección y sin sentencia
+                        firme.</td>
+                    <td class="text-center align-middle" [ngClass]="{'table-danger' : firstGrouping.ThreeThreePoints == 0, 'table-success' : firstGrouping.ThreeThreePoints == 5}">{{firstGrouping.ThreeThreeValue}}</td>
+                    <td class="text-center align-middle" [ngClass]="{'table-danger' : secondGrouping.ThreeThreePoints == 0, 'table-success' : secondGrouping.ThreeThreePoints == 5}">{{secondGrouping.ThreeThreeValue}}</td>
+                    <td class="text-center align-middle" [ngClass]="{'table-danger' : thirdGrouping.ThreeThreePoints == 0, 'table-success' : thirdGrouping.ThreeThreePoints == 5}">{{thirdGrouping.ThreeThreeValue}}</td>
+                </tr>
+                <tr>
+                    <td>3.4 Candidatos que autorizan el levantamiento de su secreto bancario ante la Unidad de
+                        Investigacion Financiera (UIF).</td>
+                    <td class="text-center align-middle"><strong>N/A</strong></td>
+                    <td class="text-center align-middle"><strong>N/A</strong></td>
+                    <td class="text-center align-middle"><strong>N/A</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

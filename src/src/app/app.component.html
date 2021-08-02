@@ -1,0 +1,166 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">
+      <img width="192" src="/assets/img/logo_sanchez_carrion.png" />
+    </a>
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <!-- <div class="collapse navbar-collapse" id="navbarCollapse"> -->
+    <div>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/home']">Inicio</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/sanchezcarrion']">Nosotros</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/results']">Resultados Calidad de las listas</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/formatomatriz']">Formato de la Matriz</a>
+          <!-- <span class="nav-link" style="cursor: pointer;" modal-trigger="evaluationDetail">Formato de la Matriz</span> -->
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/judgements']">Candidatos con sentencias penales</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" href="mailto:agenda.sanchez.carrion@gmail.com">Contacto</a>
+        </li>
+      </ul>
+      <!-- <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+    </div>
+  </nav>
+</header>
+
+<div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <strong class="text-primary" style="font-size: large;">#CongresoSinCorrupcion2020</strong>
+  <router-outlet></router-outlet>
+</div>
+
+<button (click)="topFunction()" id="goTopBtn" title="Go to top">
+  &nbsp;<i class="fas fa-arrow-up"></i>&nbsp;
+</button> 
+
+<footer class="mt-auto">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <strong>ENLACES DE INTERÉS</strong>
+        <p class="mt-3"><a href="https://votoinformado.jne.gob.pe/voto" target="_blank"><i class="fas fa-link"></i><span
+              class="ml-2">Visitar Voto Informado</span></a></p>
+        <p class="mt-3"><a href="https://portal.jne.gob.pe/portal" target="_blank"><i class="fas fa-link"></i><span
+              class="ml-2">Visitar JNE</span></a></p>
+        <p class="mt-3"><a href="https://infogob.jne.gob.pe/" target="_blank"><i class="fas fa-link"></i><span
+              class="ml-2">Visitar Infogob</span></a></p>
+        <p class="mt-3"><a href="https://plataformaelectoral.jne.gob.pe/" target="_blank"><i
+              class="fas fa-link"></i><span class="ml-2">Visitar Plataforma Electoral</span></a></p>
+        <p class="mt-3"><a href="http://www.decidebien.pe/" target="_blank"><i class="fas fa-link"></i><span
+              class="ml-2">Visitar Decide Bien</span></a></p>
+        <p class="mt-3"><a href="https://www.facebook.com/votoresponsableperu" target="_blank"><i class="fas fa-link"></i><span
+              class="ml-2">Visitar Voto Responsable</span></a></p>
+        <p class="mt-3"><a
+            href="https://www.onpe.gob.pe/modElecciones/elecciones/elecciones2020/ECE2020/capacitate.html"
+            target="_blank"><i class="fas fa-link"></i><span class="ml-2">Visitar ONPE - Elecciones Congresales
+              2020</span></a></p>
+        <img class="mt-3 mb-3" style="width: 45%;" src="/assets/img/logo-app.png" >
+      </div>
+      <div class="col-md-4">
+        <strong>DESCARGAS</strong>
+        <p class="mt-3"><a href="/assets/files/matriz_calidad_listas_candidatos.pdf" target="_blank"><i
+              class="fas fa-download"></i><span class="ml-2">Descargar Matriz</span></a></p>
+        <p class="mt-3"><a href="/assets/files/propst_agendaparlamentaria2020_2021comun.pdf" target="_blank"><i
+              class="fas fa-download"></i><span class="ml-2">Descargar Agenda Parlamentaria Común</span></a></p>
+        <p class="mt-3"><a href="/assets/files/oficios_propuestas_partidos.rar" target="_blank"><i class="fas fa-download"></i><span
+              class="ml-2">Descargar Propuestas a Partidos</span></a></p>
+        <!-- <p><a href="/assets/files/oficios_constancia_recepcion.rar" target="_blank"><i class="fas fa-download"></i><span
+              class="ml-2">Descargar oficios con constancia de
+              recepción</span></a></p> -->
+        <p><a href="/assets/files/cargo_invitación_partidos_candidatos.rar" target="_blank"><i
+              class="fas fa-download"></i><span class="ml-2">Descargar Cargos de Recepción de Partidos</span></a></p>
+        <p>
+          <a href="/assets/files/cuestionario_en_linea.pdf" target="_blank">
+            <i class="fas fa-download"></i><span class="ml-2">Descargar Cuestionario en Línea para Candidatos</span>
+          </a>
+        </p>              
+      </div>
+      <div class="col-md-4">
+        <strong>AUSPICIADORES</strong>
+        <p class="mt-3">Organizaciones que colaboran con este proyecto sin fines de lucro:</p>
+        <div class="row">
+          <div class="col-6 col-sm-6 col-md-6 text-center">
+            <img class="img-fluid p-3" src="/assets/img/logo-cip.png" ><br />
+            <a href="http://www.cip.org.pe/" target="_blank"><span class="ml-2">Colegio de Ingenieros del
+                Perú</span></a>
+          </div>
+          <div class="col-6 col-sm-6 col-md-6 text-center">
+            <img class="img-fluid p-3" src="/assets/img/logo-reach.png" ><br />
+            <a href="https://reachsos.com/" target="_blank"><span class="ml-2">Reach</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 mt-5">
+        <hr style="border: white 1px solid;" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12  text-center">
+        Desarrollado y diseñado con ❤️ por <a href="https://facebook.com/malexandersalazar"
+          target="_blank">@malexandersalazar</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- <modal-simple
+  title="¿Cómo funciona la Matriz para la Evaluación de la Calidad de las Listas de Candidatos al Parlamento 2020 - 2021?"
+  elementId="evaluationDetail" closeOnBodyClick="false">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="mb-3">1. Estructura de la Matriz</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <img class="img-fluid mb-5" src="/assets/img/img_matriz_estructura.png" >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="mb-3">2. Funcionamiento de la Matriz</h4>
+        <p><strong>Paso 1</strong> La Matriz califica mediante los Indicadores de Calidad que correspondan a
+          cada Componente de Calidad, aplicando un puntaje de 0 a 5.</p>
+        <p style="text-decoration: underline;">Componentes de Calidad:</p>
+        <ol style="font-weight: bold;">
+          <li>Representatividad (considera 5 Indicadores de Calidad)</li>
+          <li>Experticia e Instrucción (considera 3 Indicadores de Calidad)</li>
+          <li>Trayectoria y Transparencia (considera 4 Indicadores de Calidad)</li>
+        </ol>
+        <p><strong>Paso 2</strong>: Luego promedia la calificación asignada a cada Indicador de Calidad para
+          obtener el puntaje del Componente de Calidad correspondiente.</p>
+        <p><strong>Paso 3</strong>: Promedia los puntajes de los tres Componentes de Calidad para obtener el
+          puntaje de la calidad de la lista.</p>
+      </div>
+      <div class="col-md-12">
+        <img class="img-fluid mb-5" src="/assets/img/matriz_evaluacion_listas.jpg" >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="mb-3">3. Veamos un ejemplo</h4>
+      </div>
+      <div class="col-md-12 text-center">
+        <img class="img-fluid mb-5" src="/assets/img/img_matriz_ejemplo.png" >
+      </div>
+    </div>
+  </div>
+</modal-simple> -->

@@ -1,0 +1,120 @@
+<main id="title" role="main">
+    <div class="mt-5" role="banner">
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="{{selectedList.PoliticalGroupImageUrl}}" alt="" width="72"
+                height="72">
+            <h2>{{selectedList.PoliticalGroupName}}</h2>
+            <p class="lead">(*) NOTA: La MATRIZ PARA LA EVALUACIÓN DE LA CALIDAD DE LISTAS considera 3 COMPONENTES y 12 INDICADORES. La información para seis (6) indicadores se obtuvo del JNE. La Matriz se procesó en base a los INDICADORES que contaron con información del JNE, no considerándose para efectos del computo aquellos INDICADORES cuya información no fue provista por los Partidos Políticos.</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">COMPONENTE</th>
+                        <th scope="col">INDICADOR</th>
+                        <th scope="col">CONTEO</th>
+                        <th scope="col">PUNTUACIÓN</th>
+                        <th scope="col">PROMEDIO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="align-middle" rowspan="5">REPRESENTATIVIDAD</td>
+                        <td>1.1 Número de representantes de sectores productivos.<br /><br /><strong>Nota</strong>: Sin
+                            información / Partido no respondió encuesta en línea</td>
+                        <td class="text-center align-middle"><strong>N/A (*)</strong></td>
+                        <td class="text-center align-middle"><strong>N/A (*)</strong></td>
+                        <td class="text-center align-middle" rowspan="5">
+                            {{selectedList.ComponentOneAvgPoints | number:'1.2-2'}} pts.</td>
+                    </tr>
+                    <tr>
+                        <td>1.2 Número de representantes de sectores sociales.<br /><br /><strong>Nota</strong>: Sin
+                            información / Partido no respondió encuesta en línea</td>
+                        <td class="text-center align-middle"><strong>N/A (*)</strong></td>
+                        <td class="text-center align-middle"><strong>N/A (*)</strong></td>
+                    </tr>
+                    <tr>
+                        <td>1.3 Número de representantes de pueblos originarios.<br /><br /><strong>Nota</strong>: Sin
+                            información / Partido no respondió encuesta en línea</td>
+                        <td class="text-center align-middle"><strong>N/A (*)</strong></td>
+                        <td class="text-center align-middle"><strong>N/A (*)</strong></td>
+                    </tr>
+                    <tr>
+                        <td>1.4 Diferencia entre N° de candidatos hombres y mujeres en la
+                            lista.<br /><br /><strong>Fuente</strong>: JNE</td>
+                        <td class="text-center align-middle">{{selectedList.OneFourValue}}</td>
+                        <td class="text-center align-middle">{{selectedList.OneFourPoints | number:'1.2-2'}} pts.</td>
+                    </tr>
+                    <tr>
+                        <td>1.5 Número de representantes jóvenes entre 25 y 35 años.<br /><br /><strong>Fuente</strong>:
+                            JNE
+                        </td>
+                        <td class="text-center align-middle">{{selectedList.OneFiveValue}}</td>
+                        <td class="text-center align-middle">{{selectedList.OneFivePoints | number:'1.2-2'}} pts.</td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle" rowspan="3">EXPERTICIA E INSTRUCCIÓN</td>
+                        <td>2.1 Número de candidatos profesionales con maestrías.<br /><br /><strong>Fuente</strong>:
+                            JNE
+                        </td>
+                        <td class="text-center align-middle">{{selectedList.TwoOneValue}}</td>
+                        <td class="text-center align-middle">{{selectedList.TwoOnePoints | number:'1.2-2'}} pts.</td>
+                        <td class="text-center align-middle" rowspan="3">
+                            {{selectedList.ComponentTwoAvgPoints | number:'1.2-2'}} pts.</td>
+                    </tr>
+                    <tr>
+                        <td>2.2 Número de candidatos con experiencia profesional acreditada igual o mayor 10
+                            años.<br /><br /><strong>Fuente</strong>: JNE</td>
+                        <td class="text-center align-middle">{{selectedList.TwoTwoValue}}</td>
+                        <td class="text-center align-middle">{{selectedList.TwoTwoPoints | number:'1.2-2'}} pts.</td>
+                    </tr>
+                    <tr>
+                        <td>2.3 Número de candidatos que hayan publicado uno o más
+                            libros.<br /><br /><strong>Nota</strong>:
+                            Sin información / Partido no respondió encuesta en línea</td>
+                        <td class="text-center align-middle"><strong>N/A (*)</strong></td>
+                        <td class="text-center align-middle"><strong>N/A (*)</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle" rowspan="4">TRAYECTORIA Y TRANSPARENCIA</td>
+                        <td>3.1 Número de candidatos que participaron en dos (2) o más elecciones anteriores en listas
+                            de
+                            partidos diferentes.<br /><br /><strong>Fuente</strong>: JNE</td>
+                        <td class="text-center align-middle">{{selectedList.ThreeOneValue}}</td>
+                        <td class="text-center align-middle">{{selectedList.ThreeOnePoints | number:'1.2-2'}} pts.</td>
+                        <td class="text-center align-middle" rowspan="4">
+                            {{selectedList.ComponentThreeAvgPoints | number:'1.2-2'}} pts.</td>
+                    </tr>
+                    <tr>
+                        <td>3.2 Número de candidatos que son o han sido dirigentes gremiales o empresariales, un mínimo
+                            de
+                            dos años.<br /><br /><strong>Nota</strong>: Sin información / Partido no respondió encuesta
+                            en
+                            línea</td>
+                        <td class="text-center align-middle"><strong>N/A (*)</strong></td>
+                        <td class="text-center align-middle"><strong>N/A (*)</strong></td>
+                    </tr>
+                    <tr>
+                        <td>3.3 Número de candidatos que acrediten al menos un cargo público por elección y sin
+                            sentencia
+                            firme.<br /><br /><strong>Fuente</strong>: JNE</td>
+                        <td class="text-center align-middle">{{selectedList.ThreeThreeValue}}</td>
+                        <td class="text-center align-middle">{{selectedList.ThreeThreePoints | number:'1.2-2'}} pts.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3.4 Candidatos que autorizan el levantamiento de su secreto bancario ante la Unidad de
+                            Investigacion Financiera (UIF).<br /><br /><strong>Nota</strong>: Sin información / Partido
+                            no
+                            respondió encuesta en línea</td>
+                        <td class="text-center align-middle"><strong>N/A (*)</strong></td>
+                        <td class="text-center align-middle"><strong>N/A (*)</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>

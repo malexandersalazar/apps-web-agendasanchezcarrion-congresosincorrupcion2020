@@ -1,0 +1,120 @@
+@import 'variables'
+@import '../node_modules/bootstrap/scss/bootstrap'
+
+@font-face
+    font-family: Montserrat
+    src: url(./assets/fonts/Montserrat-Regular.otf) format("opentype")
+
+*
+    font-family: 'Montserrat', sans-serif
+
+a, a:hover, a:active, a:focus 
+    outline: 0
+    text-decoration: none
+
+img.logo-128
+    width: 128px
+    height: 128px
+    opacity: 0.81
+
+    &:hover
+        opacity: 1.0
+
+img.icon-64
+    width: 64px
+    height: 64px
+    border-radius: 3px
+
+img.icon-48
+    width: 48px
+    height: 48px
+    border-radius: 3px
+
+.app-nav-default
+    background-color: $primary
+    color: white
+ 
+.app-nav-link
+    color: #fff
+    border-bottom: .25rem solid $primary
+
+    &:hover
+        color: #ddd
+
+    &:active, &.active 
+        color: #fff
+        border-bottom: .25rem solid #fff
+
+    &:focus 
+        color: #fff
+
+footer
+    background: #3C4145
+    padding: 1.25rem
+    color: white
+
+    a, a:active, a:focus 
+        color: white
+        text-decoration: none
+
+    a:hover
+        color: white
+        text-decoration: underline   
+
+.has-redbar
+    border-left: 3px solid $primary
+    padding-left: 20px
+    margin-bottom: 1rem
+
+.separator
+    height: 1px
+    background-color: $primary
+
+.section
+    padding: 3rem 0
+
+.lead
+    font-weight: inherit
+
+.app-card-topbar::before
+    content: ' '
+    height: 3px
+    background-color: $primary
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+
+.app-card-action
+    cursor: pointer
+
+table.dataTable.no-footer
+    border-bottom: 0px
+
+.btn
+    cursor: pointer
+
+.text-link
+    color: $primary
+    cursor: pointer
+
+
+.carousel-control-prev-icon
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23bf0909' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e")
+
+.carousel-control-next-icon
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23bf0909' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e")
+
+.carousel-indicators li
+    background-color: #bf0909
+
+.table-bordered th, .table-bordered td
+    border: 1px solid darkgray
+
+.bg-info
+    background-color: #066197 !important
+
+select.custom-select
+    text-overflow: ellipsis
+    -webkit-appearance: none
+    font-weight: bold
